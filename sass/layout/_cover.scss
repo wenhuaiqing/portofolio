@@ -1,0 +1,27 @@
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 3rem;
+
+  &__h1,
+  &__h2 {
+    font-weight: 200;
+    margin: 0.4rem;
+  }
+
+  &__h1 {
+    font-size: 8rem;
+  }
+
+  &__h2 {
+    font-size: 3.2rem;
+    color: #ccc;
+  }
+
+  /* Cursor */
+  &__type > &__typeText {
+    border-right: 0.2rem solid #777;
+  }
+}

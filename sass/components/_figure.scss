@@ -1,0 +1,46 @@
+.figure {
+  @include absCenter;
+  height: 10rem;
+  width: 10rem;
+  top: 20%;
+  cursor: pointer;
+
+  &__outline {
+    background-color: white;
+    height: 10.5rem;
+    width: 10.5rem;
+    z-index: -1;
+    border-radius: 50%;
+    @include absCenter;
+  }
+
+  &__side {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.8s ease;
+    overflow: hidden;
+    background-size: cover;
+    &--front {
+      background-image: url(../img/photo.jpg);
+      border-radius: 50%;
+    }
+    &--back {
+      background-image: url(../img/coverBackground.jpg);
+      border-radius: 50%;
+      transform: rotateY(180deg);
+    }
+  }
+  &:hover &__side--front,
+  &:active &__side--back {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back,
+  &:active &__side--back {
+    transform: rotateY(0);
+  }
+}
