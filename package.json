@@ -2,7 +2,7 @@
   "name": "portofolio-wen",
   "version": "1.0.0",
   "description": "Huaiqing Wen's portofolio website for front end web developer job seeking",
-  "main": "/dist/index.js",
+  "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
@@ -16,7 +16,9 @@
   "author": "Huaiqing Wen",
   "license": "ISC",
   "homepage": "https://wenhuaiqing.github.io/portofolio",
-  "dependencies": {},
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
     "node-sass": "^4.10.0",
